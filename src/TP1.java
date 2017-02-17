@@ -28,13 +28,15 @@ public class TP1 {
         BufferedReader keyboard=new BufferedReader(new InputStreamReader(System.in));
 		String line=""; 
 		System.out.println("Donne le nom du fichier contenant ton mondeH.");
-                System.out.println("Remarque: le fichier doit être à la racine du projet et dois se terminer par .txt");
-                System.out.println("Exemple: planeteH01.txt");
+        System.out.println("Remarque: le fichier doit être à la racine du projet et dois se terminer par .txt");
+        System.out.println("Exemple: planeteH01.txt");
 		try{
 			line=keyboard.readLine();//Recup du texte
+		
 		}catch(IOException e){
 			System.out.println("err");
 		}
+		
         parseur.parse(line);
         parseur.planete.buildNavigationTable();
         // Création de l'objet évaluateur d'heuristique

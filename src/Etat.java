@@ -57,7 +57,7 @@ public class Etat implements Comparable<Etat>
         int xH= (int) this.emplacementHtepien.positionGeographique.getX();
         int yH= (int) this.emplacementHtepien.positionGeographique.getY();
         
-        
+    
         if((this.planete.navigationTable[(xH-1)][yH])!=null){
         	Successeur successeurHaut = new Successeur();
         	successeurHaut.etat = this.clone();
@@ -67,7 +67,6 @@ public class Etat implements Comparable<Etat>
             successeurHaut.etat.actionFromParent = "NORD";
             successeurHaut.etat.emplacementHtepien = this.planete.navigationTable[(xH-1)][yH];
             successeurs.add(successeurHaut);
-           
         }
 
         if((this.planete.navigationTable[(xH+1)][yH])!=null){

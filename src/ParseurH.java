@@ -34,7 +34,7 @@ public class ParseurH {
                 input = bin.readLine();
      int NbreColonnes = Integer.parseInt(input);
                 String nomCol ="";
-
+             
                 planete = new Planete();
                 etatInitial = new Etat(planete);
                 Vector<String> positionBombes = new Vector();
@@ -52,8 +52,11 @@ public class ParseurH {
                       planete.emplacements.put(name, location);
                       if(input.charAt(j)== 'E') etatInitial.emplacementHtepien = planete.emplacements.get(name);
                       if(input.charAt(j)== 'B') 
-                      {planete.nomBombes.add(""+input.charAt(j));
-                       positionBombes.add(name); }
+                      {
+                    	  planete.nomBombes.add(""+input.charAt(j));
+                    	  positionBombes.add(name);
+                    	  
+                       }
                       if(input.charAt(j)== 'S') 
                       {
                         Emplacement e = planete.emplacements.get(name);

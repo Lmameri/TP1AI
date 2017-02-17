@@ -54,7 +54,14 @@ public class AStar {
         	System.out.println("Iteration numero : " + i);//Afficher le numero de literation
         	
         	if(open.isEmpty()){
+        		
         		break;//If open is empty when quit the loop
+        	}
+        	
+        	Iterator<Etat> itr=open.iterator();
+        	while(itr.hasNext()){
+        	    Etat e=itr.next();
+        	    System.out.println("HEY"+e.toString());
         	}
         	
         	System.out.println("etat selectionne: " + open.first().toString());//Afficher lemplacement
